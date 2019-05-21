@@ -1,0 +1,14 @@
+0 - INFO:
+	Bot: https://github.com/CristianHur/NameAndPresenceDynamicDiscord
+	Cuando hablo de Presencia en el código me refiero al mensaje que aparece debajo del usuario, donde pone "Jugando a X", "Escuchando X",etc.
+
+1 - Necesitar tener instalado Node.js
+
+2 - Poner los archivos dentro de una carpeta
+
+3 - Abrir consola y situarla en la carpeta
+	3.1 - En Windows puedes hacer Shift + Botón derecho dentro de la carpeta y seleccionar "Abrir la ventana de PowerShell aquí"
+
+4 - Escribir "node bot.js" sin las comillas y pulsar ENTER
+
+5 - ¡¡DONE!!

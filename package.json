@@ -1,0 +1,12 @@
+{
+  "name": "Dequei-DynamicDiscord-UserBOT",
+  "version": "1.0.0",
+  "description": "Permite cambiar cada cierto tiempo el apodo y 'Presence' de Discord",
+  "main": "bot.js",
+  "author": "Dequei#0519",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "winston": "^3.1.0",
+	"aws-sdk": "^2.182.0"
+  }
+}

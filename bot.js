@@ -18,11 +18,13 @@ var bot = new Discord.Client({
 	});
 
 //VARIABLES A MODIFICAR
+var EncenderCambioNombres = true; //true para activar, false para desactivar
 var NOMBRES = ["NOMBRE 1", "NOMBRE 2"]; //Cada hueco del Array es uno de los Nombres/Apodos que saldrán. Puedes añadir los que quieras.
 var IntervaloTiempoNombre = 2000; //Tiempo entre cambio de Nombre/Apodo en Milisegundos
 var UsuarioID = "XXXXXXXX"; //ID del Usuario a Cambiar el nombre. Si no tienes permisos para cambiar apodos es probable que solo puedas cambiar tu Nombre/Apodo, por lo que debes poner tu ID de usuario. Si es un bot la ID de usuario del bot.
 var ServerID = "XXXXXXXX"; //ID del Servidor donde se va a realizar el cambio de Nombre/Apodo.
 
+var EncenderCambioPresencias = true; //true para activar, false para desactivar
 var PRESENCIAS = ["MENSAJE 1", "MENSAJE 2"]; //Cada hueco del Array es uno de los Mensajes en Jugando,Viendo,Escuchando que saldrán. Puedes añadir los que quieras.
 var IntervaloTiempoPresencia = 17000; //Tiempo entre cambio de Presence en Milisegundos
 var TipoPresencia = 3; //Tipo de mensaje en la Presencia. 0 = Jugando, 1 = Directo en Twitch, 2 = Escuchando, 3 = Viendo
@@ -42,8 +44,12 @@ var PresenciaActual = PRESENCIAS[ValorPresencia];
 bot.on('ready', function (evt) {
 	logger.info('ENCENDIDO');
 	logger.info(bot.username + ' - (' + bot.id + ')');
-	setInterval(CambiarPresencia, IntervaloTiempoPresencia);
-	setInterval(CambiarNombre, IntervaloTiempoNombre);
+	
+	if(EncenderCambioPresencias)
+		setInterval(CambiarPresencia, IntervaloTiempoPresencia);
+	
+	if(EncenderCambioNombres)
+		setInterval(CambiarNombre, IntervaloTiempoNombre);
 
 });
 
